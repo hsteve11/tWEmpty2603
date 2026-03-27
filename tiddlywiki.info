@@ -1,0 +1,16 @@
+{
+  "description": "Steve's empty base edition for experiments",
+  "plugins": [
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/filesystem"
+  ],
+  "themes": ["tiddlywiki/vanilla"],
+  "build": {
+    "index": [
+      "--rendertiddler",
+      "$:/core/save/all",
+      "index.html",
+      "text/plain"
+    ]
+  }
+}
