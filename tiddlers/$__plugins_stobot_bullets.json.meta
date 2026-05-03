@@ -1,0 +1,9 @@
+author: stobot
+core-version: >=5.2.0
+description: Enhanced list editing
+list: readme config
+name: Bullets
+plugin-type: plugin
+title: $:/plugins/stobot/bullets
+type: application/json
+version: 0.0.14

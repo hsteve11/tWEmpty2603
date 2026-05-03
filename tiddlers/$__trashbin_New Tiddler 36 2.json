@@ -1,0 +1,9 @@
+{
+    "created": "20260423051210825",
+    "creator": "Steve",
+    "text": "|Title | works? | h\n|------|--------|---|\n\n<$list filter=\"[has[works?]]\">\n| <$link to=<<currentTiddler>>><$text text=<<currentTiddler>>/></$link> | {{!!works?}} |\n</$list>\n",
+    "tags": "",
+    "title": "New Tiddler 36",
+    "modified": "20260423051214760",
+    "modifier": "Steve"
+}

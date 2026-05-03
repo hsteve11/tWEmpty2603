@@ -1,0 +1,22 @@
+created: 20260423050009098
+creator: Steve
+modified: 20260423050013834
+modifier: Steve
+tags: 
+title: New Tiddler 29
+type: text/vnd.tiddlywiki
+
+\define allPrettyLinks()
+<table>
+<tr><th>Pretty Link</th></tr>
+<$list filter="[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]" variable="result">
+<$vars searchfor="|$(result)$]]">
+<$list filter="[all[tiddlers]search<searchfor>limit[1]]" variable="found">
+<tr>
+  <td><$link to=<<result>>><<result>></$link></td>
+</tr>
+</$list>
+</$vars>
+</$list>
+</table>
+\end

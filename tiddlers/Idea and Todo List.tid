@@ -1,0 +1,54 @@
+created: 20240516044306083
+creator: Steve
+key: ((new-task))
+modified: 20260401012136278
+modifier: Steve
+tags: start
+title: Idea and Todo List
+type: text/vnd.tiddlywiki
+
+\define search-box(tempTiddler)
+<$keyboard key="escape" actions="""<$action-setfield $tiddler=<<__tempTiddler__>> $field=text $value=""/>""" >
+<$edit-text tiddler=<<__tempTiddler__>>
+  field=text 	tag=input 	type=search
+	default=""  placeholder=" enter your search terms"
+	class="search-box" />
+</$keyboard>
+\end
+\define tidSearchinTasks()$:/temp/tasks/dtable/search
+\define createTask()<$action-sendmessage $message=tm-new-tiddler title="New Task" tags=Task text="" due="" status="" priority=3/>
+\define newTask() <$button actions=<<createTask>>class="btn btn-sm mr-1">New Task</$button>
+
+<div class=float-right>
+<<newTask>>
+</div>
+
+<style>
+.search-box {
+  border:none;
+  border-bottom:1px solid #ccc;
+  outline-style: none;
+  width:20em
+}
+
+.search-box::placeholder {
+  font-size: 0.9em;
+	color: <<color muted-foreground>>
+}
+
+.search-box label{display:block;}
+.tc-tiddler-frame table.kk-idea td {word-break: break-word;}
+</style>
+
+Filter and search in table <$macrocall label="" tempTiddler=<<tidSearchinTasks>> $name=search-box/><br>
+
+<$let searchTerm={{{[<tidSearchinTasks>get[text]]}}}>
+<$list filter="[<tidSearchinTasks>has[text]]"emptyMessage="<small> All tasks: <$count filter=[tag[Task]]/>"variable=null>
+<small><$count filter="[tag[Task]search<searchTerm>]"/> matches</small>
+</$list>
+<!---->
+<$macrocall $name=table-dynamic filter="[tag[Task]search<searchTerm>]" fields="tbl-checkbox tbl-expand title status due priority" class="kk-idea w-100" stateTiddler=tasks-state-tid/>
+
+
+@@.todo
+@@

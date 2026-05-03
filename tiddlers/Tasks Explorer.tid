@@ -1,0 +1,28 @@
+color: #c80000
+created: 20220925160949164
+creator: Steve
+due: 20220828120000000
+icon: $:/plugins/kookma/thinkup/images/tasks
+modified: 20260424235628326
+modifier: Steve
+myTabs: Tab1
+mytabs: Tab1
+title: Tasks Explorer
+type: text/vnd.tiddlywiki
+
+\import $:/plugins/kookma/thinkup/macros/tasks-explorer
+\import $:/plugins/kookma/thinkup/macros/searchbox
+<div class=float-right>
+<<newTask>>
+</div>
+
+<small><<selectFilter>>&nbsp;|&nbsp;</small><$macrocall label=''tempTiddler=<<tidSearchinTasks>>$name=search-box/><br>
+
+<$let searchTerm={{{[<tidSearchinTasks>get[text]]}}}defaultFilter=[tag[Task]] mainFilter={{{[<tidSearchinTasks>get[main-filter]]:else[<defaultFilter>]}}}>
+<$list filter='[<tidSearchinTasks>has[text]]'emptyMessage='<small><<taskStatistics>>'variable=null>
+<small><$count filter='[subfilter<mainFilter>search<searchTerm>]'/> matches</small>
+</$list>
+<!---->
+<$macrocall $name=table-dynamic filter='[subfilter<mainFilter>search<searchTerm>]'fields='tbl-checkbox tbl-expand title status due priority'class='w-100 thinkup-task-explorer'emptyMessage='<br/>'stateTiddler=TaskExplorer-stateTiddler/>
+</$let>
+<small><<cleanTaskExplorerLog>>

@@ -1,0 +1,14 @@
+created: 20260420071457105
+creator: Steve
+modified: 20260420071549349
+modifier: Steve
+tags: 
+title: New Tiddler 4
+type: text/vnd.tiddlywiki
+
+<$list filter="[search:links[Linko]]">
+  <$set name="rawtext" value={{!!text}}>
+    <$wikify name="links" text="""<$list filter="[<rawtext>regexp[\[\[([^\]|]+)\|Linko\]\]]]"><<currentTiddler>></$list>""">
+    </$wikify>
+  </$set>
+</$list>

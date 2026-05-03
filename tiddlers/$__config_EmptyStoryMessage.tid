@@ -1,0 +1,10 @@
+created: 20250219193617320
+modified: 20250219193620095
+title: $:/config/EmptyStoryMessage
+type: text/vnd.tiddlywiki
+
+\import $:/plugins/kookma/thinkup/macros/empty-story
+<<navButton label:[[Tasks Explorer]]targetTiddler:[[Tasks Explorer]]>> | 
+<<navButton label:[[Journal Book]]targetTiddler:[[Journal Book]]>> | 
+<<randomTiddler filter:[all[tiddlers]!is[system]] label:[[Random Article]]>> | 
+<<todayJournal>>

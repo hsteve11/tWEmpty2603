@@ -1,0 +1,22 @@
+created: 20260420071210291
+creator: Steve
+modified: 20260420114444284
+modifier: Steve
+tags: 
+title: Linko
+type: text/vnd.tiddlywiki
+works?: yes
+
+\define searchterm() |$(currentTiddler)$]]
+
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[backlinks<currentTiddler>search:text<searchterm>nsort[modified]reverse[]]" emptyMessage="No pretty links yet">
+<tr>
+  <td><$link to=<<currentTiddler>>><<currentTiddler>></$link></td>
+  <td>{{!!text}}</td>
+</tr>
+</$list>
+</table>
+
+

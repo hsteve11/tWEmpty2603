@@ -1,0 +1,9 @@
+{
+    "created": "20260423050230557",
+    "creator": "Steve",
+    "text": "<$list filter=\"[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]\" variable=\"result\">\n<$vars searchfor=\"|$(result)$]]\">\n<$list filter=\"[all[tiddlers]search<searchfor>limit[1]]\" variable=\"found\">\n<<result>>\n</$list>\n</$vars>\n</$list>",
+    "tags": "",
+    "title": "New Tiddler 33",
+    "modified": "20260423050237677",
+    "modifier": "Steve"
+}

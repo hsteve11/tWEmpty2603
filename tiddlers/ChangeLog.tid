@@ -1,0 +1,110 @@
+created: 20200312083811789
+modified: 20250219194123202
+tags: doc
+title: ChangeLog
+type: text/vnd.tiddlywiki
+
+!! Release 1.0.0
+* ''Feb 19th, 2025''
+* [NEW] Updated to TiddlyWiki 5.3.6
+* [FIXED] A type in [[$:/config/EmptyStoryMessage]] 
+
+!! Release 0.7.8
+* ''Aug 25th, 2023''
+* [NEW] Updated to Thinkup 0.7.8
+* [NEW] Works in ~TiddlyWiki 5.3.1
+* [NEW] Compressed and uglified
+
+
+!! Release 0.7.1
+* ''Apr 28th, 2023''
+* [NEW] Updated to Thinkup 0.7.7
+* [FIXED] A bug in Comments tab: when kara checklist/interstitial is used the data block is shown
+
+
+!! Release 0.7.0
+* ''Apr 20th, 2023''
+* [NEW] Updated to ~TiddlyWiki 5.2.7
+* [NEW] Updated all third party plugins
+* [NEW] Added new autocomplete plugin
+
+!! Release 0.6.0
+* ''Sep 4th, 2022''
+* [NEW] Pikaday was added to be used with tasks
+* [NEW] Tasks Explorer has a keyboard shortcuts to be opened in srory river
+* [NEW] Tasks in Tasks Explorer can be filtered by schedule, completed, open , ... criteria
+* [NEW] Task tiddlers have priority flag with color
+* [FIXED] Tasks Explorer table now works with Pikaday
+
+!! Release 0.5.0
+* ''Aug 5th, 2022''
+* [NEW] Update to Tiddlywiki 5.2.3
+* [NEW] Kara replaced Todolist in smart tabs
+* [NEW] Todolist was replaced by checklist see [[$:/plugins/kookma/thinkup/stabs/todos]]
+* [NEW] Interstitial-ui from Todolist was replaced by Kara interstitial see [[$:/plugins/kookma/thinkup/viewtemplates/smart-tabs-journal]]
+* [NEW] Task tiddlers equipped with due date and priority on subtitle
+* [NEW] Task tiddler on creation now have due date set to today
+* [NEW] Tasks Explore now supports dark theme
+* [FIXED] Tasks Explorer has clean left over button
+* [FIXED] Input box for interstitial notes only displayed for today Journal and not for past ones!
+* [FIXED] The smart tab viewtemplate uses `list-after` field with empty value to be at the last UI element when tiddler viewd
+* [FIXED] Smart tabs on other tiddlers now follow the fold state of tiddler, see [[$:/plugins/kookma/thinkup/viewtemplates/smart-tabs]]
+* [FIXED] Smart tabs on journals now follow the fold state of tiddler, see [[$:/plugins/kookma/thinkup/viewtemplates/smart-tabs-journal]]
+
+
+!! Release 0.3.0
+* ''July 7th, 2022''
+* [NEW] Update to Tiddlywiki 5.2.2
+* [FIXED] prevent task button overlaps smar tab for empty task tiddler
+* [FIXED] prevent task button overlap fields, when view fields is on in Utility plugin
+
+!! Release 0.2.6
+* ''Dec 17th, 2021''
+* [NEW] Switch on/off Journal smart tabs
+* [NEW] The colored tag `done` added
+* [NEW] Tasks Explorer button on all Task tiddlers
+* [FIXED] On Journal tiddlers, Tasks only appears under journal tasks and not journal activites! before this, tasks were listed in both smart tabs.
+* [FIXED] Category tabs show sorted items by title
+* [FIXED] Code polished. Extra viewtemplates deleted
+* [FIXED] Font size of keywords in Keywords small tab decreased
+
+
+!! Release 0.2.5
+* ''Nov 19th, 2021''
+* [NEW] cascade filetr of TW 5.2.1 is used to set category tiddler icons
+* [NEW] tinyurl macro to shorten lengthy links
+* [NEW] added some documenations
+* [NEW] done button on task tiddler
+
+
+!! Release 0.2.4
+* ''Nov 12th, 2021''
+* [NEW] searchbox in category tab
+* [NEW] keywords smart tab
+* [NEW] keywords like tags has drag and drop properties
+* [NEW] shortcut keys for new source
+* [NEW] shortcut keys for new people
+* [NEW] shortcut keys for new task
+* [NEW] shortcut keys for new idea
+* [NEW] task explorer and category tab for explorer is added
+* [FIXED] improved documentations
+
+
+!! Release 0.2.3
+* ''Nov 1st, 2021''
+* [NEW] a central todolist on the category tab
+* [FIXED] sevarl bug fixes
+
+!! Release 0.2.2 
+* ''Oct 29th, 2021''
+* [NEW] official comments plugin adopted
+* [NEW] smart tabs developed instead of core tabs
+* [FIXED] fonts, colors, icons for smart tabs
+
+!! Release 0.2.1
+* ''Sep 19, 2021''
+* [FIXED] equation numbering for ~KaTeX issue in Node-Explorer
+
+!! Release 0.2.0
+* ''Aug 31, 2021''
+* [NEW] Tag clouds added

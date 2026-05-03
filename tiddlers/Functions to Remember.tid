@@ -1,0 +1,11 @@
+2Remember: cli
+created: 20260502094709585
+creator: Steve
+modified: 20260502094853965
+modifier: Steve
+tags: cli
+title: Functions to Remember
+type: text/vnd.tiddlywiki
+
+* Navi
+* Atuin — a sophisticated shell history recorder that presents a fuzzy-matching UI on top of your command history, similar to how fzf enhances Ctrl-R but with more context like timestamps and exit codes 

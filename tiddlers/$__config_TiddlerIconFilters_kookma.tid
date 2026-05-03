@@ -1,0 +1,7 @@
+created: 20211126185147594
+modified: 20211126185246568
+tags: $:/tags/TiddlerIconFilter
+title: $:/config/TiddlerIconFilters/kookma
+type: text/vnd.tiddlywiki
+
+[tag[start]then[$:/core/images/globe]]

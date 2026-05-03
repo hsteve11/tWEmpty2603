@@ -1,0 +1,19 @@
+caption: SQ Plugin Library
+created: 20220802142611699
+modified: 20220802143044275
+tags: $:/tags/PluginLibrary
+title: $:/config/SQPL
+type: text/vnd.tiddlywiki
+url: https://saqimtiaz.github.io/SQPL/library/index.html
+
+!!Saq's Plugin library.
+
+!! Installation instructions
+
+* Drag & drop this link into your wiki to add the plugin library:  [[$:/config/SQPL]]
+
+!! How to install SQPL plugins
+
+* Go to the Control Panel of your wiki, in the Plugins tab
+* Open the SQPL library
+

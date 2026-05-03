@@ -1,0 +1,161 @@
+created: 20190806143011518
+creator: Mat von TWaddle
+modified: 20240818080135017
+modifier: MatVonTWaddle
+tags: $:/tags/Stylesheet
+title: $:/_Stylesheet/.table
+type: text/vnd.tiddlywiki
+version: 1.0.0
+
+\define tidwidth()
+<% if [{$:/themes/tiddlywiki/vanilla/options/sidebarlayout}prefix[fluid-fixed]] %>calc(100vw - {{$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth}} - 142px)<% else %>calc({{$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth}} - 110px)<% endif %>
+\end
+
+\define col-widths(uls)
+<% if [[$uls$]suffix[ul]] %><$macrocall
+	$name=col-widths
+	uls={{{ [[$uls$]removesuffix[ ul]] }}}
+/><$let
+	nr={{{ [[$uls$]split[ ]count[]add[1]] }}} >ul:has(>li.table):has($uls$) li {
+		grid-template-columns: repeat(8, minmax(calc(<<tidwidth>> / <<nr>>), 1fr));
+}
+</$let><% endif %>
+\end
+
+\define fader-margin-left(uls)
+<% if [[$uls$]suffix[ul]] %><$macrocall
+	$name=fader-margin-left
+	uls={{{ [[$uls$]removesuffix[ ul]] }}} /><$let
+		nr={{{ [[$uls$]split[ ]count[]add[1]] }}} >ul:has(>li.table.compact):has($uls$) > li:not(:hover):not(:empty)::before,
+ ul:has(>li.table.compact):has($uls$) > li:not(:hover) ul li::before {
+	margin-left:calc(<<tidwidth>> / <<nr>> - 20px);
+}</$let>
+<% endif %>
+\end
+
+
+<pre>/********************************************************************
+
+*`.table` - the only required style. The rest are optional.
+*`.h` - styled header row
+*`.i` - bold index (i.e leftmost) column
+*`.compact` - for a compact table
+
+	https://table.tiddlyhost.com/
+
+*********************************************************************/
+
+ul:has(>li.table) ul * { /* if table overflows tiddler */
+	background:<<colour background>>;
+}
+ul:has(>li.table) {
+	padding-left:0
+}
+ul:has(>li.table) ul {
+	padding-inline-start: 0;  /* remove bullet list indentation */
+	margin:0;  /* Chrome */
+}
+ul:has(>li.table) li {
+	list-style-type: none; 
+	display: grid; 
+	border-top:1px solid <<colour table-border>>;
+	padding-left:5px;
+	margin-left:-5px
+}
+ul:has(>li.table) li a {
+	display:contents;
+}
+ul:has(>li.table) li:first-child {
+	margin-top:-.67px;  /* ...split the atom to prevent border drift! */
+}
+ul:has(>li.table) > li:last-child { 
+	border-bottom: 1px solid <<colour table-border>>;
+	padding-bottom:1px;
+
+} 
+/* column width */
+<<col-widths "ul ul ul ul ul ul ul ul">>
+
+
+/* BORDER around whole table  (disabled) */
+Xul:has(>li.table.i) {
+	outline:1px solid  <<colour table-border>>;
+	margin-left:-5px;
+	padding-left:5px;
+}
+
+/* HORIZONTAL SEPARATOR LINE from empty first-level bullets */
+ul:has(>li.table) li:empty {
+	border:2px solid <<colour table-header-background>>;
+}
+
+/* HEADER ROW */
+ul:has(>li.table.h) > li:first-child,
+ ul:has(>li.table.h) > li:first-child li {
+	font-weight:bold;
+	background: <<colour table-header-background>>;
+}
+
+/* INDEX COLUMN - i.e leftmost column for all "level one" bullets */
+ul:has(>li.table.i) > li {
+	font-weight:bold;
+}
+ul:has(>li.table.i) ul > li {
+	font-weight:normal
+}
+ul:has(>li.table.i) > li > ul  {
+	border-left:1px solid  <<colour table-border>>;
+	padding-left:5px;
+	margin-left:-5px;
+}
+
+/* COMPACT */
+ul:has(>li.table.compact) li {
+	white-space:nowrap;
+}
+ul:has(>li.table.compact) > li {
+	overflow-x:hidden;
+}
+ul:has(>li.table.compact) > li:hover,
+ ul:has(>li.table.compact) > li:hover * {
+	white-space:normal;
+}
+
+/* text transparent when outside of cell */
+ul:has(>li.table.compact) li  {
+	background: linear-gradient(to right,
+		<<colour foreground>> calc(<<tidwidth>> / 4),
+		transparent 0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* show fader if no hover */
+ul:has(>li.table.compact) > li:not(:hover):not(:empty)::before,
+ ul:has(>li.table.compact) > li:not(:hover) ul li::before {
+	content:" ";
+	-webkit-text-fill-color: <<colour foreground>>;
+	position:absolute;
+	background: linear-gradient(to right,
+		transparent,
+		<<color background>>);
+	width:20px;
+	margin-top:3px;
+	height:1.2em;
+}
+
+/*  fader margin-left */
+<<fader-margin-left "ul ul ul ul ul ul ul ul">>
+
+/* header row when compact */
+ul:has(>li.table.compact) > li:first-child,
+ ul:has(>li.table.compact) > li:first-child li {
+	-webkit-text-fill-color: <<colour foreground>>; 
+}
+
+/* header row when compact - no fader */
+ul:has(>li.table.compact) > li:first-child::before,
+ ul:has(>li.table.compact) > li:first-child li::before {
+	display:none;
+}
+</pre>

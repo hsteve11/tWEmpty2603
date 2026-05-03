@@ -1,0 +1,22 @@
+created: 20260423043605144
+creator: Steve
+modified: 20260423043624925
+modifier: Steve
+tags: 
+title: New Tiddler 19
+type: text/vnd.tiddlywiki
+
+\define conceptSection(concept)
+<details>
+<summary>$concept$</summary>
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[all[tiddlers]search[|$concept$]]]" emptyMessage="No pretty links yet" variable="result">
+<tr>
+  <td><$link to=<<result>>><<result>></$link></td>
+  <td><$transclude tiddler=<<result>> field="text"/></td>
+</tr>
+</$list>
+</table>
+</details>
+\end

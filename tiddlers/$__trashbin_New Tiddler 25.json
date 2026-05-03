@@ -1,0 +1,9 @@
+{
+    "created": "20260423045517637",
+    "creator": "Steve",
+    "text": "<table>\n<tr><th>Pretty Link</th></tr>\n<$list filter=\"[all[tiddlers]!is[system]links[]!prefix[$:/]sort[title]]\" variable=\"result\">\n<$vars searchfor=\"|$(result)$]]\">\n<$list filter=\"[all[tiddlers]search<searchfor>limit[1]]\" variable=\"found\">\n<tr>\n  <td><$link to=<<result>>><<result>></$link></td>\n</tr>\n</$list>\n</$vars>\n</$list>\n</table> is picking up missing tiddlers like [[mow grass]] too",
+    "tags": "",
+    "title": "New Tiddler 25",
+    "modified": "20260423045521893",
+    "modifier": "Steve"
+}

@@ -1,0 +1,16 @@
+created: 20260423043639614
+creator: Steve
+modified: 20260423044539800
+modifier: Steve
+tags: 
+title: New Tiddler 20
+type: text/vnd.tiddlywiki
+
+<table>
+<tr><th>Pretty Link</th></tr>
+<$list filter="[all[tiddlers]!is[system]links[]sort[title]]" variable="result">
+<tr>
+  <td><$link to=<<result>>><<result>></$link></td>
+</tr>
+</$list>
+</table>

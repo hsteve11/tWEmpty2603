@@ -1,0 +1,9 @@
+{
+    "created": "20260423050449634",
+    "creator": "Steve",
+    "text": "\\define allPrettyLinks()\n<table>\n<tr><th>Pretty Link</th></tr>\n<$list filter=\"[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]\" variable=\"result\">\n<$set name=\"searchfor\" value=\"|$(result)$]]\">\n<$list filter=\"[all[tiddlers]search<searchfor>limit[1]]\" variable=\"found\">\n<tr>\n  <td><<result>></td>\n</tr>\n</$list>\n</$set>\n</$list>\n</table>\n\\end\n\n<<allPrettyLinks>>",
+    "tags": "",
+    "title": "New Tiddler 36",
+    "modified": "20260423050452535",
+    "modifier": "Steve"
+}

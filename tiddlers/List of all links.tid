@@ -1,0 +1,20 @@
+created: 20260423045155472
+creator: Steve
+modified: 20260423052250333
+modifier: Steve
+tags: 
+title: List of all links
+type: text/vnd.tiddlywiki
+
+<table>
+<tr><th>Pretty Link</th></tr>
+<$list filter="[all[tiddlers]!is[system]links[]!prefix[$:/]sort[title]]" variable="result">
+<$vars searchfor="|$(result)$]]">
+<$list filter="[all[tiddlers]search<searchfor>limit[1]]" variable="found">
+<tr>
+  <td><$link to=<<result>>><<result>></$link></td>
+</tr>
+</$list>
+</$vars>
+</$list>
+</table>

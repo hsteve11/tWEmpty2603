@@ -1,0 +1,14 @@
+author: Mohammad Rahmani
+core-version: >=5.2.3
+created: 20220927033659649
+dependents: $:/plugins/kookma/shiraz $:/plugins/kookma/pikaday $:/plugins/kookma/kara
+description: Personal knowledge management with Tiddlywiki
+list: readme license history
+modified: 20230825111440425
+name: Thinkup
+plugin-type: plugin
+source: https://github.com/kookma/TW-Thinkup
+tags: 
+title: $:/plugins/kookma/thinkup
+type: application/json
+version: 0.7.8

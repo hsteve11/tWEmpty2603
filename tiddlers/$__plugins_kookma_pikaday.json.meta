@@ -1,0 +1,11 @@
+author: Nicolas Petton, Mohammad Rahmani
+core-version: >=5.2.3
+dependents: 
+description: Date picker from Projectify
+list: readme history license
+name: Pikaday
+plugin-type: plugin
+source: https://github.com/kookma/TW-Pikaday
+title: $:/plugins/kookma/pikaday
+type: application/json
+version: 0.5.4

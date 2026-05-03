@@ -1,0 +1,11 @@
+created: 20200220202639265
+creator: Mohammad
+modified: 20221208160814971
+modifier: Mohammad
+tags: $:/tags/ViewTemplate
+title: $:/config/toc-multilevel-hierarchical-navigation
+type: text/vnd.tiddlywiki
+
+\import [all[tiddlers+shadows]tag[$:/tags/Macro/Toc]]
+<!-- Call navigator -->
+<<multilevel-toc-navigation tag:"Contents" close:"no" class:"kk-toc-navigation colorful-btns" stateTiddler:"$:/state/20220925-main-toc">>

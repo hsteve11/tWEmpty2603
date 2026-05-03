@@ -1,0 +1,11 @@
+author: Mohammad Rahmani
+core-version: >= 5.2.1
+dependents: 
+description: Create indexes for subject, author, places, objects, etc.
+list: readme license history
+name: Indexer
+plugin-type: plugin
+source: https://github.com/kookma/TW-Indexer
+title: $:/plugins/kookma/indexer
+type: application/json
+version: 0.6.0

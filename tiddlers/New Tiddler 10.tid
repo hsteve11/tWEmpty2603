@@ -1,0 +1,22 @@
+created: 20260423034222567
+creator: Steve
+modified: 20260423034228052
+modifier: Steve
+tags: 
+title: New Tiddler 10
+type: text/vnd.tiddlywiki
+
+\define allBacklinks()
+<details>
+<summary>All Backlinks</summary>
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[all[tiddlers]links[]nsort[modified]reverse[]]" emptyMessage="No backlinks yet">
+<tr>
+  <td><$link to=<<currentTiddler>>><<currentTiddler>></$link></td>
+  <td>{{!!text}}</td>
+</tr>
+</$list>
+</table>
+</details>
+\end

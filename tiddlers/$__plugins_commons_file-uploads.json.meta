@@ -1,0 +1,11 @@
+author: Saq Imtiaz
+core-version: >=5.2.0
+dependents: 
+description: Upload binary files to external storage
+list: readme settings
+name: File Uploads
+plugin-priority: 0
+plugin-type: plugin
+title: $:/plugins/commons/file-uploads
+type: application/json
+version: 0.1.8

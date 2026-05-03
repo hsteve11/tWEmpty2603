@@ -1,0 +1,32 @@
+created: 20260423045614317
+creator: Steve
+modified: 20260423045617917
+modifier: Steve
+tags: 
+title: New Tiddler 25
+type: text/vnd.tiddlywiki
+
+<table>
+<tr><th>Pretty Link</th></tr>
+
+<$list filter="[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]" variable="result">
+  <$vars pattern="
+
+\[
+
+\[[^\]
+
+]*\|\s*$(result)$\s*\]
+
+\]
+
+">
+    <$list filter="[all[tiddlers]regexp<pattern>limit[1]]" variable="found">
+      <tr>
+        <td><$link to=<<result>>><<result>></$link></td>
+      </tr>
+    </$list>
+  </$vars>
+</$list>
+
+</table>

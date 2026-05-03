@@ -1,0 +1,37 @@
+NewAIDevt: run your mac computer programs
+created: 20260423202528067
+creator: Steve
+modified: 20260423211437457
+modifier: Steve
+tags: AIUpdate
+title: OpenAI versus the rest regarding normal computer use
+type: text/vnd.tiddlywiki
+
+Here's how they compare across the key dimensions:
+
+**What OpenAI offers (Codex on Mac)**
+
+OpenAI's "Background Computer Use," launched April 16, 2026, lets Codex operate macOS applications autonomously using its own cursor — seeing the screen, clicking interface elements, and typing across any app, including those without APIs. Multiple Codex agents can run in parallel in the background, without disrupting whatever the user is doing in the foreground.
+
+**Head-to-head comparison:**
+
+| | OpenAI Codex | Windows-Use |
+|---|---|---|
+| **Platform** | Mac (Windows app exists but computer use not yet there) | Windows 7–11 |
+| **Target user** | Consumers & developers | Developers only |
+| **Setup** | Download app, log in, done | Python 3.10+, pip install, write code |
+| **Cost** | $20/month (ChatGPT Plus) | Free & open source |
+| **How it sees the screen** | Screen capture + vision AI | Windows UI Automation API (no vision needed) |
+| **Runs in background** | Yes — agents work while you use your Mac normally | No — takes over your active session |
+| **AI model** | GPT-4 only | Any — Claude, GPT-4, Gemini, local models |
+| **Memory** | Yes, built-in | Experimental/optional |
+| **Voice** | No | Yes |
+| **Sandboxed** | Yes — isolated processes | No — full unsandboxed system access |
+
+**The key differences in plain terms:**
+
+OpenAI's offering is a polished consumer product. You install it like any other app, grant screen permissions, and tell it what to do in plain English. It runs tasks quietly in the background while you continue working. Codex agents run as background processes, operating other apps through cursor and keyboard while you keep working — a change that transforms it from a developer tool into a general business automation platform.
+
+Windows-Use is essentially raw infrastructure. It's more flexible (any AI model, any LLM provider, highly configurable) but requires programming knowledge to use, has no consumer interface, and critically — provides no sandbox or isolation layer, meaning it can make irreversible changes to your system, which is why the developers strongly recommend running it in a virtual machine.
+
+This is the first time computer-use AI has shipped inside a consumer-facing, subscription-tier product at scale. Windows-Use is the open-source building block that could one day become that — but it isn't there yet.

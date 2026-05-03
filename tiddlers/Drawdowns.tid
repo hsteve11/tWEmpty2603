@@ -1,0 +1,52 @@
+created: 20260423205848234
+creator: Steve
+modified: 20260423210057198
+modifier: Steve
+tags: Retirement
+title: Drawdowns
+type: text/vnd.tiddlywiki
+
+Yes, that's exactly right! Here's how the drawdown works:
+
+## Understanding the Drawdown ✓
+
+When you withdraw **6,131.81 per month** from a **1,000,000** principal earning **4% annually**, the balance will reduce to **zero over exactly 20 years** (240 months).
+
+### How it works:
+
+| Factor | Value |
+|--------|-------|
+| **Starting Balance** | 1,000,000 |
+| **Monthly Withdrawal** | 6,131.81 |
+| **Annual Interest Rate** | 4% |
+| **Monthly Interest Rate** | 0.333% (4% ÷ 12) |
+| **Term** | 20 years (240 months) |
+
+### The Mechanics:
+
+1. **Each month**, you earn interest on the remaining balance (at ~0.333% per month)
+2. **Then you withdraw** 6,131.81
+3. **The balance decreases** gradually because withdrawals exceed the interest earned
+4. **After 240 months**, the balance hits exactly zero
+
+### The Maths:
+
+The monthly payment of **6,131.81** is calculated using the PMT formula:
+```
+=PMT(4%/12, 20*12, 1000000) × -1
+```
+
+This formula finds the exact payment amount that will:
+- Draw down the full principal
+- Account for interest earned along the way
+- Reach zero at the end of the term
+
+### Summary Over 20 Years:
+
+| Item | Value |
+|------|-------|
+| **Total Withdrawn** | 1,471,634.40 (6,131.81 × 240) |
+| **Original Principal** | 1,000,000 |
+| **Total Interest Earned** | 471,634.40 |
+
+So you actually withdraw **47% more** than your original principal thanks to the interest earned over the 20 years!

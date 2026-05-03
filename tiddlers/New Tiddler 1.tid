@@ -1,5 +1,11 @@
-created: 20260327095312574
-modified: 20260327095314640
+created: 20260420071139773
+creator: Steve
+modified: 20260423052343765
+modifier: Steve
 tags: 
 title: New Tiddler 1
 type: text/vnd.tiddlywiki
+
+[[here is a new link|Linko]]
+
+[[ggrr|Linko]]

@@ -1,0 +1,9 @@
+{
+    "created": "20260423051430207",
+    "creator": "Steve",
+    "text": "<$list filter=\"[has[works?]]\">\n<$set name=\"w\" value={{!!works?}}>\n| <$link to=<<currentTiddler>>><$text text=<<currentTiddler>>/></$link> | <<w>> |\n</$set>\n</$list>\n",
+    "tags": "",
+    "title": "New Tiddler 37",
+    "modified": "20260423051434891",
+    "modifier": "Steve"
+}

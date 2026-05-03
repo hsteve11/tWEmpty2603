@@ -1,0 +1,24 @@
+created: 20260423035033506
+creator: Steve
+modified: 20260423035037550
+modifier: Steve
+tags: 
+title: New Tiddler 14
+type: text/vnd.tiddlywiki
+
+\define searchterm() |$(concept)$]]
+
+\define conceptSection(concept)
+<details>
+<summary>$concept$</summary>
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[all[tiddlers]search:literal<searchterm>]" emptyMessage="No pretty links yet" variable="result">
+<tr>
+  <td><$link to=<<result>>><<result>></$link></td>
+  <td><$transclude tiddler=<<result>> field="text"/></td>
+</tr>
+</$list>
+</table>
+</details>
+\end

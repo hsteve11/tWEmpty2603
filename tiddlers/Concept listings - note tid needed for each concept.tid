@@ -1,0 +1,33 @@
+created: 20260420115622976
+creator: Steve
+modified: 20260502052655918
+modifier: Steve
+tags: 
+title: Concept listings - note tid needed for each concept
+type: text/vnd.tiddlywiki
+works?: yes
+
+\define searchterm() |$(concept)$]]
+
+\define conceptSection(concept)
+<details>
+<summary>$concept$</summary>
+<$set name="concept" value="$concept$">
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[backlinks[$concept$]search:text<searchterm>nsort[modified]reverse[]]" emptyMessage="No pretty links yet">
+<tr>
+  <td><$link to=<<currentTiddler>>><<currentTiddler>></$link></td>
+  <td>{{!!text}}</td>
+</tr>
+</$list>
+</table>
+</$set>
+</details>
+\end
+
+<<conceptSection 2Sign>>
+<<conceptSection ForLater>>
+<<conceptSection Linko>>
+<<conceptSection AnotherConcept>>
+<<conceptSection YetAnother>>

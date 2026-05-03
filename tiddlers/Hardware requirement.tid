@@ -1,0 +1,20 @@
+created: 20260423202908198
+creator: Steve
+modified: 20260423202930863
+modifier: Steve
+tags: [[OpenAI versus the rest regarding normal computer use]]
+title: Hardware requirement
+type: text/vnd.tiddlywiki
+
+No, neither requires special hardware. Here's the quick breakdown:
+
+**OpenAI Codex (Mac)**
+You just need a Mac running macOS — the April 2026 update even added support for Intel Macs, so it's not limited to the newer Apple Silicon chips. Beyond that, you need a paid ChatGPT plan ($20/month). The heavy AI processing all happens in OpenAI's cloud, not on your machine.
+
+**Windows-Use**
+Runs on any Windows 7 through 11 PC. Again, the AI model runs in the cloud (via whichever provider you connect it to — Anthropic, OpenAI, Google, etc.), so your local machine just needs to be able to run Python. The one exception is if you choose to run a local AI model via Ollama — then you'd want a reasonably powerful PC with a decent GPU, but that's an optional advanced configuration.
+
+**The broader picture**
+This is actually one of the more interesting aspects of this technology — because the "brain" (the AI) lives in the cloud, the computer being controlled doesn't need to be powerful at all. It just needs to run the software and have an internet connection. That's quite different from, say, gaming AI or video generation, which genuinely do demand high-end hardware.
+
+The one consumer caveat worth noting: computer use is not available in the EU, UK, EEA, or Switzerland at launch for OpenAI's Codex, so geography matters more than hardware for some users.

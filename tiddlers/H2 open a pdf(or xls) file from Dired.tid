@@ -1,0 +1,44 @@
+created: 20260423091240870
+creator: Steve
+modified: 20260423091403483
+modifier: Steve
+tags: Doom
+title: H2 open a pdf(or xls) file from Dired
+type: text/vnd.tiddlywiki
+
+Hit ! and type wslview
+
+In a Dired buffer in WSL2 Emacs, the trick is that you can't use the normal `o` or `RET` directly to open with a Windows app. Use this:
+
+**Place cursor on the PDF file, then:**
+
+```
+! cmd.exe /c start "" "filename.pdf" RET
+```
+
+Or more reliably, use `wslview` (from `wslu` package):
+
+```
+! wslview filename.pdf RET
+```
+
+The `!` in Dired runs a shell command on the file under point — Emacs substitutes the filename automatically.
+
+**If `wslview` isn't installed:**
+```bash
+sudo apt install wslu
+```
+
+**To make it permanent** so `RET` or `o` auto-opens PDFs with the Windows default, add to your `init.el`:
+
+```elisp
+(setq dired-guess-shell-alist-user
+      '(("\\.pdf\\'" "wslview")))
+```
+
+Then in Dired you can just press `!` and it will suggest `wslview` automatically, or use `&` to run it asynchronously in the background (so Emacs doesn't freeze waiting for it).
+
+**`&` is actually the best option** — place cursor on the PDF and press:
+```
+& wslview RET
+```

@@ -1,0 +1,99 @@
+NewAIDevt: secure Desktop
+created: 20260423211127979
+creator: Steve
+modified: 20260423211358892
+modifier: Steve
+title: Thunderbolt
+type: text/vnd.tiddlywiki
+
+**No — Thunderbolt itself does *not* require heavy hardware.**  
+What *does* require hardware is whatever **model you choose to run behind it**. Thunderbolt is just the **client + orchestration layer**, not the compute engine.
+
+Here’s the clean way to think about it:
+
+---
+
+## 🧩 Thunderbolt ≠ the model  
+Thunderbolt is basically:
+
+- a UI  
+- a workflow engine  
+- a RAG/agent orchestrator  
+- a connector to Haystack pipelines  
+- a secure, local AI “desktop environment”
+
+It does **not** run models by itself.  
+It simply **connects to whatever model server you point it at**.
+
+So the hardware requirement is **identical to whatever model backend you choose**.
+
+---
+
+## 🖥️ What hardware Thunderbolt *actually* needs
+Thunderbolt itself is lightweight:
+
+- Runs on Windows, macOS, Linux, iOS, Android, Web  
+- Uses SQLite for local storage  
+- Uses Haystack for pipelines  
+- CPU‑only is fine  
+- No GPU required for the client  
+
+If you can run Thunderbird or VS Code, you can run Thunderbolt.
+
+---
+
+## 🧠 What *does* need hardware: your model backend  
+Thunderbolt can connect to:
+
+- **Local Ollama** (CPU or GPU)  
+- **Local vLLM**  
+- **Local llama.cpp server**  
+- **Remote on‑prem GPU servers**  
+- **Commercial APIs** (OpenAI, Anthropic, etc.)  
+- **Any MCP/ACP‑compatible model server**
+
+So the hardware requirement depends entirely on your choice:
+
+### If you run small models (Qwen 2.5 7B, Llama 3.2 3B)
+Your mid‑range i7 + WSL setup is **perfectly fine**.
+
+### If you want 70B or 405B models
+Then yes, you’d need:
+
+- a local GPU server, **or**
+- a private on‑prem cluster, **or**
+- a commercial API (if your org allows it)
+
+But that’s a model requirement, not a Thunderbolt requirement.
+
+---
+
+## 🧭 The simplest way to run Thunderbolt on your hardware
+For your setup (mid‑range i7, WSL, Ollama):
+
+**Thunderbolt → Ollama (local) → Qwen 2.5 7B or DeepSeek‑R1 7B**
+
+This gives you:
+
+- fully local  
+- audit‑safe  
+- reproducible  
+- zero cloud  
+- no GPU required  
+- fast enough for your knowledge‑base workflows  
+
+This is exactly the architecture Thunderbolt is designed for.
+
+---
+
+## 🧠 The non‑obvious insight  
+Thunderbolt is *not* competing with Ollama.  
+Thunderbolt is competing with **OpenWebUI, AnythingLLM, and Haystack Studio**.
+
+Ollama Cloud is competing with **OpenAI, Anthropic, Groq, and Together**.
+
+Different layers of the stack.
+
+---
+
+If you want, I can map out a **minimal Thunderbolt + Ollama + Haystack pipeline** tailored to your Obsidian → TiddlyWiki knowledge‑base workflow.

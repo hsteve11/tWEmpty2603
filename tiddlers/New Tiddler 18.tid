@@ -1,0 +1,19 @@
+created: 20260423035625799
+creator: Steve
+modified: 20260423035630327
+modifier: Steve
+tags: 
+title: New Tiddler 18
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[tiddlers]regexp:
+
+\[
+
+\[[^\]
+
+]*\|\s*$concept$\s*\]
+
+\]
+
+]">

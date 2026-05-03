@@ -1,0 +1,5 @@
+tags: $:/tags/ViewTemplate
+title: $:/core/ui/ViewTemplate/subtitle
+type: text/vnd.tiddlywiki
+
+<$reveal type=nomatch stateTitle=<<folded-state>>text=hide tag=div retain=yes animate=yes><div class=tc-subtitle><$list filter="[[$:/tags/ViewTemplate/Subtitle]tagging[]!is[draft]]"variable=subtitleTiddler counter=indexSubtitleTiddler><$list filter="[<indexSubtitleTiddler-first>match[no]]"variable=ignore>&nbsp;</$list><$transclude tiddler=<<subtitleTiddler>>mode=inline/>

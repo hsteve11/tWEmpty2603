@@ -1,0 +1,39 @@
+created: 20260423045704290
+creator: Steve
+modified: 20260423045709059
+modifier: Steve
+tags: 
+title: New Tiddler 26
+type: text/vnd.tiddlywiki
+
+<table>
+<tr><th>Pretty Link</th></tr>
+
+<$list
+  filter="[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]"
+  variable="target">
+
+  <!-- For each link target, see if any tiddler's *text* contains a pretty link to it -->
+  <$list
+    filter="[all[tiddlers]regexp:text[
+
+\[
+
+\[[^\]
+
+]*\|\s*<target>\s*\]
+
+\]
+
+]limit[1]]"
+    variable="found">
+
+    <tr>
+      <td><$link to=<<target>>><<target>></$link></td>
+    </tr>
+
+  </$list>
+
+</$list>
+
+</table>

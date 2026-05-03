@@ -1,0 +1,26 @@
+created: 20260423050301224
+creator: Steve
+modified: 20260423050622161
+modifier: Steve
+tags: 
+title: Pretty Link List
+type: text/vnd.tiddlywiki
+
+\define buildSearch(term) |$term$]]
+
+\define allPrettyLinks()
+<table>
+<tr><th>Pretty Link</th></tr>
+<$list filter="[all[tiddlers]!is[system]links[]!is[missing]!prefix[$:/]sort[title]]" variable="result">
+<$wikify name="searchfor" text=<<result>>>
+<$list filter="[all[tiddlers]search<searchfor>limit[1]]" variable="found">
+<tr>
+  <td><<result>></td>
+</tr>
+</$list>
+</$wikify>
+</$list>
+</table>
+\end
+
+<<allPrettyLinks>>

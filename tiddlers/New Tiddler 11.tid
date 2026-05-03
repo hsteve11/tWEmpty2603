@@ -1,0 +1,26 @@
+created: 20260423034635919
+creator: Steve
+modified: 20260423034651059
+modifier: Steve
+tags: 
+title: New Tiddler 11
+type: text/vnd.tiddlywiki
+
+\define searchterm() |$(concept)$]]
+
+\define conceptSection(concept)
+<details>
+<summary>$concept$</summary>
+<table>
+<tr><th>From</th><th>Content</th></tr>
+<$list filter="[all[tiddlers]search:text<searchterm>nsort[modified]reverse[]]" emptyMessage="No pretty links yet">
+<$tiddler tiddler=<<currentTiddler>>>
+<tr>
+  <td><$link><<currentTiddler>></$link></td>
+  <td>{{!!text}}</td>
+</tr>
+</$tiddler>
+</$list>
+</table>
+</details>
+\end

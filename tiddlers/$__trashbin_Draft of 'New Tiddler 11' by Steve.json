@@ -1,0 +1,11 @@
+{
+    "text": "\\define searchterm() |$(concept)$]]\n\n\\define conceptSection(concept)\n<details>\n<summary>$concept$</summary>\n<$set name=\"concept\" value=\"$concept$\">\n<table>\n<tr><th>From</th><th>Content</th></tr>\n<$list filter=\"[all[tiddlers]search:text<searchterm>nsort[modified]reverse[]]\" emptyMessage=\"No pretty links yet\">\n<tr>\n  <td><$link to=<<currentTiddler>>><<currentTiddler>></$link></td>\n  <td>{{!!text}}</td>\n</tr>\n</$list>\n</table>\n</$set>\n</details>\n\\end",
+    "created": "20260423034510347",
+    "creator": "Steve",
+    "tags": "",
+    "title": "Draft of 'New Tiddler 11' by Steve",
+    "modified": "20260423034533652",
+    "modifier": "Steve",
+    "draft.title": "New Tiddler 11",
+    "draft.of": "New Tiddler 11"
+}

@@ -1,0 +1,11 @@
+created: 20260401011121165
+creator: Steve
+modified: 20260401015236416
+modifier: Steve
+tags: 
+title: Tablist for Tab1
+type: text/vnd.tiddlywiki
+
+<<tabs tabsList:"[field:myTabs[Tab1]]"
+       default:"First Tiddler Title"
+       class:"tc-vertical">>
