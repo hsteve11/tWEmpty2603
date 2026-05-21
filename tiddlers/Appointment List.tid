@@ -1,0 +1,35 @@
+created: 20260519204017636
+modified: 20260519204048189
+tags: 
+title: Appointment List
+type: text/vnd.tiddlywiki
+
+!! Appointments
+
+<$list filter="[has[scheduled]sort[scheduled]]">
+<div style="
+  margin:0 0 1em 0;
+  padding:0.8em;
+  border-left:4px solid #4a90e2;
+  background:#f7f9fc;
+  border-radius:4px;
+">
+
+  <!-- When -->
+  <div style="font-size:1.1em; font-weight:bold; margin-bottom:0.2em;">
+    <$view field="scheduled" format="date" template="DDD DD MMM YYYY hh:mm am/pm"/>
+  </div>
+
+  <!-- Title -->
+  <div style="margin-bottom:0.4em;">
+    <$link/>
+  </div>
+
+  <!-- Details -->
+  <div style="color:#555;">
+    <span style="font-weight:bold;">Duration:</span> <$view field="duration"/> minutes<br/>
+    <span style="font-weight:bold;">Notes:</span> <$view field="text"/>
+  </div>
+
+</div>
+</$list>

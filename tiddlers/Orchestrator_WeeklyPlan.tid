@@ -1,0 +1,17 @@
+created: 20260518010426182
+modified: 20260518010426427
+tags: #type/plan #source/phi3
+title: Orchestrator/WeeklyPlan
+type: text/vnd.tiddlywiki
+
+```markdown
+| Day       | Mode         | Task              |
+|-----------|--------------|--------------------|
+| Monday    | Afternoon    | Update farm records|
+| Tuesday   | Afternoon    | Plan next sprint   |
+| Wednesday | Afternoon    | Review client invoices|
+| Thursday  | Afternoon    | Write blog post    |
+| Friday    | Afternoon    | Call accountant    |
+| Saturday  | Day           | -                  |
+| Sunday    | Day & Evening | Review            |
+```

@@ -1,0 +1,13 @@
+title: AppointmentList
+type: text/vnd.tiddlywiki
+
+!! Appointments
+
+<$list filter="[has[scheduled]sort[scheduled]]">
+<div>
+<strong><$view field="scheduled" format="date" template="DDD DD MMM YYYY hh:mm am/pm"/></strong><br/>
+<$link/><br/>
+Duration: <$view field="duration"/> minutes<br/>
+Notes: <$view field="text"/><br/><br/>
+</div>
+</$list>

@@ -1,0 +1,15 @@
+created: 20260519202646881
+modified: 20260519202754598
+tags: 
+title: New Tiddler 7
+type: text/vnd.tiddlywiki
+
+!! Appointments with invalid scheduled format
+
+<$list filter="[has[scheduled]length:scheduled[15]!]"
+
+<div>
+<strong><$view field="title"/></strong><br/>
+Scheduled: <$view field="scheduled"/><br/><br/>
+</div>
+</$list>

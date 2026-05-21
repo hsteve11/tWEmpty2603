@@ -1,0 +1,13 @@
+created: 20260519202856360
+modified: 20260519202902079
+tags: 
+title: New Tiddler 8
+type: text/vnd.tiddlywiki
+
+!! All scheduled field values
+
+<$list filter="[has[scheduled]sort[scheduled]]">
+<div>
+<$view field="title"/> — <$view field="scheduled"/><br/>
+</div>
+</$list>

@@ -1,0 +1,16 @@
+created: 20260519204747501
+modified: 20260519204752480
+tags: 
+title: New Tiddler 15
+type: text/vnd.tiddlywiki
+
+Now that the schema is locked in, we can:
+
+A) Generate the LLM prompt template that enforces all rules
+B) Generate the promotion/demotion algorithm in pseudocode
+C) Generate the TiddlyWiki dashboard for Urgent / Active / Background / Scheduled
+D) Generate the validation rules another LLM must apply
+E) Generate the import/export pipeline  
+F) All of the above
+
+Tell me the letter and I’ll build it.

@@ -1,0 +1,29 @@
+created: 20260519203932425
+modified: 20260519203934842
+tags: 
+title: New Tiddler 13
+type: text/vnd.tiddlywiki
+
+!! Appointments
+
+<$list filter="[has[scheduled]sort[scheduled]]">
+<div style="
+  border:1px solid #ccc;
+  border-radius:6px;
+  padding:0.8em;
+  margin:0 0 1em 0;
+  background:#fafafa;
+">
+
+  <div style="font-size:1.1em; font-weight:bold; margin-bottom:0.3em;">
+    <$view field="scheduled" format="date" template="DDD DD MMM YYYY hh:mm am/pm"/>
+  </div>
+
+  <div style="margin-left:0.3em;">
+    <$link/><br/>
+    <span style="color:#666;">Duration:</span> <$view field="duration"/> minutes<br/>
+    <span style="color:#666;">Notes:</span> <$view field="text"/>
+  </div>
+
+</div>
+</$list>

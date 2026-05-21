@@ -1,0 +1,13 @@
+created: 20260516095113347
+modified: 20260516115606468
+tags: 
+title: Orchestrator/ModeMap
+type: text/vnd.tiddlywiki
+
+| Task Type | Goes In |
+| invoicing | Farm PM |
+| data entry | Farm PM |
+| email replies | Farm PM |
+| tax returns | Client Day |
+| client calls | Client Day |
+| bank reconciliation | Farm PM |

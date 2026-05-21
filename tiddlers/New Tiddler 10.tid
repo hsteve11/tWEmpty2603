@@ -1,0 +1,12 @@
+created: 20260519203408663
+modified: 20260519203410863
+tags: 
+title: New Tiddler 10
+type: text/vnd.tiddlywiki
+
+<$list filter="[has[scheduled]regexp[scheduled]!^[0-9]{15}$]">
+<div>
+<strong><$view field="title"/></strong><br/>
+Scheduled: <$view field="scheduled"/><br/><br/>
+</div>
+</$list>

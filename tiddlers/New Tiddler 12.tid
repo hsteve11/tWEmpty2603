@@ -1,0 +1,13 @@
+created: 20260519203644897
+modified: 20260519203647344
+tags: 
+title: New Tiddler 12
+type: text/vnd.tiddlywiki
+
+<$list filter="[has[scheduled]search:scheduled[T]]">
+<div>
+<$view field="title"/>
+<$button><$action-deletetiddler $tiddler=<<currentTiddler>>/>Delete</$button>
+<br/>
+</div>
+</$list>

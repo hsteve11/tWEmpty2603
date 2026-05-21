@@ -1,0 +1,18 @@
+created: 20260519201240525
+draft.of: New Tiddler 2
+draft.title: New Tiddler 2
+modified: 20260519203846291
+tags: 
+title: Draft of 'New Tiddler 2'
+type: text/vnd.tiddlywiki
+
+!! Appointments
+
+<$list filter="[has[scheduled]sort[scheduled]]">
+<div>
+<strong><$view field="scheduled" format="date" template="DDD DDth MMM YYYY 0hh:0mm"/></strong><br/>
+<$link/><br/>
+Duration: <$view field="duration"/> minutes<br/>
+Notes: <$view field="text"/><br/><br/>
+</div>
+</$list>
